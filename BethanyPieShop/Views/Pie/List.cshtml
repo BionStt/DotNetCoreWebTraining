@@ -4,7 +4,15 @@
 <h1>@Model.CurrentCategory</h1>
 @foreach (var pie in Model.Pies)
 {
-    <div class="col-sm-4 col-lg-4 col-md-4">
+    @Html.Partial("PieOverviewSummary", pie)
+
+    @*<div>
+        <h2>@pie.Name</h2>
+        <h3>@pie.Price.ToString("c")</h3>
+        <h4>@pie.Category.CategoryName</h4>
+    </div>*@
+
+    @*<div class="col-sm-4 col-lg-4 col-md-4">
         <div class="thumbnail">
             <img src="@pie.ImageThumbnailUrl" alt=""/>
             <div class="caption">
@@ -15,6 +23,6 @@
                 <p>@pie.ShortDescription</p>
             </div>
         </div>
-    </div>
+    </div>*@
 }
 
